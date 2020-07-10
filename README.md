@@ -1,9 +1,59 @@
 # Crypto News Analysis
-A repository built to compliment the executium [trending news](https://github.com/executium/trending-historical-cryptocurrency-news) API. This repository will concentrate on 
+A repository built to compliment the executium [trending news](https://github.com/executium/trending-historical-cryptocurrency-news) API. This repository will concentrate on the timeline of articles released and the effect.
+
+This project fetches JSON data about crypto-currency trends from an Executium `trending-historical-cryptocurrency-news` `endpoint`, and takes this data and displays it in a graph and in a table.
 
 ## Installation
 
-## Usage
+1. Clone the repository.
+2. Run `npm i` and wait for packages to install.
+3. Run `npm start`.
+
+#### Port selection
+If you are running something on port 3000 already it will ask you if you want to change
+```bash
+
+Something is already running on port 3000. Probably:
+
+/usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 3000 -container-ip x.x.x.x -container-port 3000 (pid 9053)
+
+Would you like to run the app on another port instead? `Yes` 
+```
+
+## What it all means
+
+#### Effect
+Please allow some time for the `effect` to compile, this will show the overall impact
+![effect](https://i.imgur.com/mJWhcFW.jpg)
+
+#### Publisher
+On each given day you can use the navigation to filter the publishers
+![publisher](https://i.imgur.com/gZX45fq.jpg)
+
+## Customize the design
+Everything you are looking for in terms of customization can be found in the `src/App.js` file. It can all be customized.
+
+- For example if you are looking to chane the background color
+
+```javascript
+const GlobalStyle = createGlobalStyle`
+  body {
+    font: 14px Ubuntu, sans-serif;
+    background: #fff8f8;
+  }
+```
+
+- Changing the font
+The font is loaded in the `src/indx.js` on limne 9
+
+```javascript
+WebFont.load({
+  google: {
+    families: ['Ubuntu|Material+Icons', 'sans-serif'],
+  },
+})
+```
+You will need to adjust your font here, and then also adjust the  `src/App.js` file where `font: 14px Ubuntu, sans-serif;` exists.
 
 ## Affiliation
 I am in noway affiliated with executium or its products. For more terms and conditions you should refer to their terms and conditions.
