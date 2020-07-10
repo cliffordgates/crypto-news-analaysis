@@ -18,6 +18,7 @@ The table shows up to 50 articles by default. Sorted by most recent. You can dso
 ```
 https://localhost:9000
 ```
+The port can be changed in the `run.js` file
 
 ## Running in the background
 If you want to run the package without having to be logged in the following method *should* work effectively.
@@ -70,7 +71,7 @@ WebFont.load({
   },
 })
 ```
-You will need to adjust your font here, and then also adjust the  `src/App.js` file where `font: 14px Ubuntu, sans-serif;` exists.
+You will need to adjust your font here, and then also adjust the  `src/App.js` file where `font: 11px Ubuntu, sans-serif;` exists.
 
 ## Affiliation
 I am in noway affiliated with executium or its products. For more terms and conditions you should refer to their terms and conditions.
