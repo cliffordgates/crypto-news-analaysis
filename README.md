@@ -8,19 +8,27 @@ This project fetches JSON data about crypto-currency trends from an Executium `t
 1. Clone the repository.
 2. Run `npm i` and wait for packages to install.
 3. Run `npm start`.
+4. Run `npm run build`
+
+## Running in the background
+If you want to run the package without having to be logged in the following method *should* work effectively.
+
+```
+nohup npm start --prefix /var/www/html/tests/trends/isha > /var/log/trending-news-log 2>&1 &
+```
+If you are having issues with this then try run `npm cache clean --force`
 
 #### Port selection
 If you are running something on port 3000 already it will ask you if you want to change
 ```bash
 
 Something is already running on port 3000. Probably:
-
 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 3000 -container-ip x.x.x.x -container-port 3000 (pid 9053)
-
 Would you like to run the app on another port instead? `Yes` 
+
 ```
 
-## What it all means
+## Attributes
 
 #### Effect
 Please allow some time for the `effect` to compile, this will show the overall impact
