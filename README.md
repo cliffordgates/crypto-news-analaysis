@@ -3,19 +3,21 @@ A repository built to compliment the executium [trending news](https://github.co
 
 This project fetches JSON data about crypto-currency trends from an Executium `trending-historical-cryptocurrency-news` `endpoint`, and takes this data and displays it in a graph and in a table.
 
+## Ordering
+The table shows up to 50 articles by default. Sorted by most recent. You can dsort by using the headers and the date/time range provided. This is a good basis for you to start and fork your own development.
+
 ## Installation
 
-1. Clone the repository.
+1. Clone the repository to your computer.
 2. Run `npm i` and wait for packages to install.
-3. Run `npm start`.
+3. Run: `npm run build`
+4. Run: `node run.js`
 
 #### Then open ...
 
 ```
-https://localhost:3000
+https://localhost:9000
 ```
-
-It requires `HTTPS`
 
 ## Running in the background
 If you want to run the package without having to be logged in the following method *should* work effectively.
@@ -26,11 +28,11 @@ nohup npm start --prefix /var/www/html/tests/trends/isha > /var/log/trending-new
 If you are having issues with this then try run `npm cache clean --force`
 
 #### Port selection
-If you are running something on port 3000 already it will ask you if you want to change
+If you are running something on port 9000 already it will ask you if you want to change
 ```bash
 
-Something is already running on port 3000. Probably:
-/usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 3000 -container-ip x.x.x.x -container-port 3000 (pid 9053)
+Something is already running on port 9000. Probably:
+/usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 9000 -container-ip x.x.x.x -container-port 9000 (pid 9053)
 Would you like to run the app on another port instead? `Yes` 
 
 ```
