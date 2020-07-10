@@ -8,7 +8,14 @@ This project fetches JSON data about crypto-currency trends from an Executium `t
 1. Clone the repository.
 2. Run `npm i` and wait for packages to install.
 3. Run `npm start`.
-4. Run `npm run build`
+
+#### Then open ...
+
+```
+https://localhost:3000
+```
+
+It requires `HTTPS`
 
 ## Running in the background
 If you want to run the package without having to be logged in the following method *should* work effectively.
@@ -46,7 +53,7 @@ Everything you are looking for in terms of customization can be found in the `sr
 ```javascript
 const GlobalStyle = createGlobalStyle`
   body {
-    font: 14px Ubuntu, sans-serif;
+    font: 11px Ubuntu, sans-serif;
     background: #fff8f8;
   }
 ```
